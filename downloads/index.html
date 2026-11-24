@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fractal SafeView — Downloads</title>
+<meta name="description" content="Downloads for Fractal SafeView, a security-focused desktop video player that fully re-encodes untrusted media before playback. SafeView ships as a portable zip — no installer.">
+<link rel="canonical" href="https://sv.extremeteam.online/downloads/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Fractal SafeView">
+<meta property="og:title" content="Fractal SafeView — Downloads">
+<meta property="og:description" content="Release builds and file descriptions for Fractal SafeView. Distributed as a portable zip — no installer.">
+<meta property="og:url" content="https://sv.extremeteam.online/downloads/">
+<meta property="og:image" content="https://i.ibb.co/2B5RN5s/Safe-View3.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Fractal SafeView — Downloads">
+<meta name="twitter:description" content="Release builds and file descriptions for Fractal SafeView. Distributed as a portable zip — no installer.">
+<meta name="twitter:image" content="https://i.ibb.co/2B5RN5s/Safe-View3.png">
+<meta name="theme-color" content="#0A0D13">
+<link rel="icon" type="image/png" href="https://i.ibb.co/2B5RN5s/Safe-View3.png">
+<style>
+:root{
+  --bg:#0A0D13;
+  --bg-alt:#0C1017;
+  --surface:#10141D;
+  --surface-2:#131926;
+  --line:rgba(148,163,184,.14);
+  --line-strong:rgba(148,163,184,.30);
+  --text:#E8ECF4;
+  --muted:#94A0B8;
+  --cyan:#40DDEB;
+  --blue:#3B87DC;
+  --purple:#8B6CE0;
+  --green:#57B568;
+  --amber:#D9A441;
+  --radius:12px;
+  --radius-sm:8px;
+  --sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --mono:ui-monospace,"SF Mono","Cascadia Code","JetBrains Mono",Consolas,"Liberation Mono",monospace;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--bg);color:var(--text);
+  font-family:var(--sans);font-size:16px;line-height:1.65;
+  -webkit-font-smoothing:antialiased;overflow-x:clip;
+}
+img{max-width:100%;display:block}
+a{color:var(--cyan);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+:focus-visible{outline:2px solid var(--cyan);outline-offset:2px;border-radius:4px}
+.container{max-width:980px;margin-inline:auto;padding-inline:clamp(20px,4vw,32px)}
+.skip-link{position:absolute;left:-9999px;top:0;background:var(--cyan);color:#062a31;padding:10px 16px;border-radius:0 0 8px 0;font-weight:600;z-index:100}
+.skip-link:focus{left:0}
+
+/* ---------- Header ---------- */
+.site-header{position:sticky;top:0;z-index:50;background:rgba(10,13,19,.92);border-bottom:1px solid var(--line)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;height:64px}
+.brand{display:inline-flex;align-items:center;gap:10px;color:var(--text);font-weight:700;font-size:1.02rem}
+.brand:hover{text-decoration:none}
+.brand img{width:26px;height:26px;border-radius:6px;object-fit:contain}
+.brand .accent{color:var(--cyan)}
+.site-nav ul{display:flex;gap:4px;list-style:none;margin:0;padding:0}
+.site-nav a{display:block;padding:8px 12px;border-radius:8px;color:var(--muted);font-size:.92rem;font-weight:500}
+.site-nav a:hover{color:var(--text);background:var(--surface);text-decoration:none}
+@media (max-width:640px){
+  .header-inner{flex-wrap:wrap;height:auto;padding:10px 0 6px}
+  .site-nav{width:100%}
+  .site-nav ul{flex-wrap:wrap;gap:2px 4px}
+  .site-nav a{padding:7px 9px;font-size:.85rem}
+  .use-grid{grid-template-columns:1fr}
+  .release-files a{margin-left:0}
+}
+
+/* ---------- Page hero ---------- */
+.page-hero{padding:clamp(56px,8vw,88px) 0 clamp(40px,6vw,64px)}
+.page-hero .crumb{
+  font-family:var(--mono);font-size:.8rem;color:var(--muted);margin:0 0 18px;
+}
+.page-hero .crumb a{color:var(--cyan)}
+.page-hero h1{margin:0 0 14px;font-size:clamp(2rem,4.4vw,2.9rem);letter-spacing:-.02em;line-height:1.1}
+.page-hero .lede{margin:0;color:var(--muted);max-width:60ch;font-size:1.02rem}
+.status-chip{
+  display:inline-flex;align-items:center;gap:8px;margin-top:20px;
+  font-family:var(--mono);font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;
+  border:1px dashed var(--line-strong);border-radius:999px;padding:6px 14px;color:var(--muted);
+}
+.status-chip .dot{width:7px;height:7px;border-radius:50%;background:var(--amber)}
+
+/* ---------- Sections ---------- */
+.section{padding:clamp(40px,6vw,64px) 0}
+.section-alt{background:var(--bg-alt);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.section-head{margin-bottom:clamp(24px,4vw,36px)}
+.section-head h2{margin:0 0 10px;font-size:clamp(1.4rem,3vw,1.8rem);letter-spacing:-.01em}
+.section-head p{margin:0;color:var(--muted);max-width:68ch}
+
+/* ---------- Release ---------- */
+.release{
+  background:var(--surface);border:1px solid var(--line-strong);border-radius:var(--radius);
+  padding:clamp(22px,3vw,30px);margin-bottom:18px;
+}
+.release.latest{border-color:rgba(64,221,235,.45);background:linear-gradient(180deg,rgba(64,221,235,.06),transparent 55%),var(--surface)}
+.release-top{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-bottom:12px}
+.release-top h3{margin:0;font-size:1.2rem;font-family:var(--mono)}
+.rel-tag{
+  font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;
+  border-radius:999px;padding:4px 11px;
+}
+.rel-tag.latest{color:#062a31;background:var(--cyan)}
+.rel-tag.prev{color:var(--muted);border:1px solid var(--line-strong)}
+.release-meta{font-family:var(--mono);font-size:.8rem;color:var(--muted);display:flex;flex-wrap:wrap;gap:6px 18px;margin-bottom:14px}
+.release-notes{margin:0;color:var(--muted);font-size:.94rem}
+.release-files{margin:16px 0 0;padding:0;list-style:none;display:grid;gap:10px}
+.release-files li{
+  display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;
+  background:var(--surface-2);border:1px solid var(--line);border-radius:var(--radius-sm);
+  padding:12px 16px;font-family:var(--mono);font-size:.86rem;
+}
+.release-files .f-name{color:var(--text);overflow-wrap:anywhere}
+.release-files .f-desc{color:var(--muted);font-family:var(--sans);font-size:.84rem;flex:1;min-width:180px}
+.release-files a{
+  margin-left:auto;color:var(--cyan);font-weight:600;border:1px solid rgba(64,221,235,.4);
+  border-radius:7px;padding:6px 14px;white-space:nowrap;
+}
+.release-files a:hover{background:rgba(64,221,235,.08);text-decoration:none}
+
+.empty-state{
+  background:var(--surface);border:1px dashed var(--line-strong);border-radius:var(--radius);
+  padding:clamp(28px,4vw,44px);text-align:center;
+}
+.empty-state h3{margin:0 0 10px;font-size:1.1rem}
+.empty-state p{margin:0 auto 8px;color:var(--muted);max-width:56ch;font-size:.94rem}
+.empty-state code{font-family:var(--mono);color:var(--cyan);font-size:.9em}
+
+/* ---------- Cards ---------- */
+.use-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.use-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px 24px}
+.use-card h3{margin:0 0 8px;font-size:1.02rem;display:flex;align-items:center;gap:10px}
+.use-card h3 svg{width:19px;height:19px;color:var(--cyan);flex:none}
+.use-card p{margin:0;color:var(--muted);font-size:.9rem}
+.use-card p + p{margin-top:8px}
+.use-card a{color:var(--cyan)}
+.faq-item{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-sm);padding:18px 22px;margin-bottom:14px}
+.faq-item h3{margin:0 0 6px;font-size:.98rem}
+.faq-item p{margin:0;color:var(--muted);font-size:.9rem}
+
+/* ---------- Footer ---------- */
+.site-footer{border-top:1px solid var(--line);padding:clamp(40px,6vw,56px) 0 30px;background:#090C11;margin-top:clamp(40px,6vw,72px)}
+.footer-top{display:flex;flex-wrap:wrap;gap:16px 28px;align-items:center;justify-content:space-between;margin-bottom:clamp(28px,4vw,40px)}
+.return-link{
+  display:inline-flex;align-items:center;gap:9px;font-weight:650;font-size:.95rem;
+  color:var(--text);border:1px solid var(--line-strong);border-radius:var(--radius-sm);
+  padding:10px 18px;
+}
+.return-link:hover{border-color:var(--cyan);color:var(--cyan);text-decoration:none}
+.eco-links{display:flex;flex-wrap:wrap;gap:6px 20px;font-size:.9rem}
+.eco-links a{color:var(--muted)}
+.eco-links a:hover{color:var(--cyan)}
+.footer-bottom{
+  padding-top:20px;border-top:1px solid var(--line);
+  display:flex;flex-wrap:wrap;gap:10px 24px;justify-content:space-between;
+  color:var(--muted);font-size:.82rem;
+}
+
+/* ---------- Reveal ---------- */
+html.js [data-reveal]{opacity:0;transform:translateY(12px);transition:opacity .5s ease,transform .5s ease}
+html.js [data-reveal].revealed{opacity:1;transform:none}
+@media (max-width:640px){
+  .use-grid{grid-template-columns:1fr}
+  .release-files a{margin-left:0}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  html.js [data-reveal]{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<script>document.documentElement.classList.add('js')</script>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="https://sv.extremeteam.online/">
+      <img src="https://i.ibb.co/2B5RN5s/Safe-View3.png" alt="" width="26" height="26">
+      <span>Fractal&nbsp;<span class="accent">SafeView</span></span>
+    </a>
+    <nav class="site-nav" aria-label="Downloads page navigation">
+      <ul>
+        <li><a href="https://sv.extremeteam.online/">Main site</a></li>
+        <li><a href="https://sv.extremeteam.online/#how">How it works</a></li>
+        <li><a href="https://sv.extremeteam.online/#security">Security</a></li>
+        <li><a href="https://sc.extremeteam.online" target="_blank" rel="noopener">FractalScript</a></li>
+        <li><a href="https://extremeteam.online" target="_blank" rel="noopener">ExtremeTeam</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="page-hero">
+    <div class="container">
+      <p class="crumb" data-reveal><a href="https://sv.extremeteam.online/">sv.extremeteam.online</a> / downloads</p>
+      <h1 data-reveal>Downloads</h1>
+      <p class="lede" data-reveal>Release builds and file descriptions for Fractal SafeView — a security-focused desktop video player that fully re-encodes untrusted media before playback. SafeView is distributed as a portable zip: there is no installer.</p>
+      <span class="status-chip" data-reveal><span class="dot" aria-hidden="true"></span>Release list managed in this page&rsquo;s source</span>
+    </div>
+  </section>
+
+  <section class="section" id="releases">
+    <div class="container">
+      <header class="section-head" data-reveal>
+        <h2>Available releases</h2>
+        <p>Only verified releases are listed here — no invented versions, file sizes, checksums or download counts. When a release is published, it is added to the page source and appears below automatically.</p>
+      </header>
+
+      <div id="release-list" data-reveal>
+        <noscript>
+          <article class="release latest">
+            <div class="release-top">
+              <h3>Fractal SafeView 1.0.0</h3>
+              <span class="rel-tag latest">Latest</span>
+            </div>
+            <div class="release-meta"><span>2026-11-22</span><span>Windows</span></div>
+            <p class="release-notes">First public release, published on GitHub Releases. Portable zip — extract it to a folder and run the application from there; no installer.</p>
+            <ul class="release-files">
+              <li><span class="f-name">SafeView-v1.0.0.zip</span><span class="f-desc">Portable zip — extract and run, no installer</span><a href="https://github.com/TheNewExtremeRay/FractalSafeView/releases/download/1.0.0/SafeView-v1.0.0.zip" target="_blank" rel="noopener">Download</a></li>
+            </ul>
+          </article>
+        </noscript>
+        <div class="empty-state" hidden>
+          <h3>No release entries are defined</h3>
+          <p>No release entries are currently defined in the <code>SAFEVIEW_RELEASES</code> constant in this file&rsquo;s source.</p>
+          <p>To publish one, add an entry — version, date, platform, file name, URL and notes — and it renders here as a proper release card. Nothing else needs to change.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="use-today">
+    <div class="container">
+      <header class="section-head" data-reveal>
+        <h2>What you can read today</h2>
+        <p>The release list above is short for now — the full product story is already documented on the main site, including exactly how the sanitization pipeline works and where its guarantees stop.</p>
+      </header>
+      <div class="use-grid">
+        <div class="use-card" data-reveal>
+          <h3><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 6h16M4 12h10M4 18h7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="18" cy="16" r="3.2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M18 14.8v2.4M16.8 16h2.4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>How the pipeline works</h3>
+          <p>Never trust the file: SafeView decodes the original video and audio completely, re-encodes them as fresh H.264 and AAC, and plays only the newly generated fragmented MP4 — the original bitstream never reaches the player.</p>
+          <p><a href="https://sv.extremeteam.online/#how">See the five-stage pipeline →</a></p>
+        </div>
+        <div class="use-card" data-reveal>
+          <h3><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3l7 3v5.5c0 4.6-3.1 7.7-7 9.5-3.9-1.8-7-4.9-7-9.5V6z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 11.8l2.1 2.2L15.3 9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Security &amp; limitations</h3>
+          <p>What sanitization reduces — and what it cannot guarantee. SafeView&rsquo;s honest security position, its limitations statement and the claims it deliberately does not make.</p>
+          <p><a href="https://sv.extremeteam.online/#security">Read the security notes →</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="installing">
+    <div class="container">
+      <header class="section-head" data-reveal>
+        <h2>Distribution notes</h2>
+        <p>SafeView ships as a portable zip. These notes cover what that means — without inventing release details that don&rsquo;t exist yet.</p>
+      </header>
+      <div data-reveal>
+        <div class="faq-item">
+          <h3>Is there an installer?</h3>
+          <p>No. SafeView is distributed as a portable <span style="font-family:var(--mono)">.zip</span> archive: extract it to a folder and run the application from there. There is no setup wizard and no installation step — when a release is published, its entry above describes exactly which files the archive contains.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Where do the download links point?</h3>
+          <p>Each release entry in the <code style="font-family:var(--mono)">SAFEVIEW_RELEASES</code> constant carries its own verified URL. Release 1.0.0 points directly to the <span style="font-family:var(--mono)">SafeView-v1.0.0.zip</span> asset in the TheNewExtremeRay/FractalSafeView repository&rsquo;s GitHub Releases — every file listed here is real, linked and live.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Does SafeView sandbox my system?</h3>
+          <p>No — and it says so directly. SafeView re-encodes untrusted media before playback as one additional layer of defense; it does not sandbox or isolate the playback environment and it does not claim to make malicious files risk-free. The complete security position, including the limitations statement, is on the main site.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Questions about releases?</h3>
+          <p>Reach FractalLabs by email at <a href="mailto:fractallabsisac@gmail.com">fractallabsisac@gmail.com</a>, or explore the rest of the ecosystem: <a href="https://extremeteam.online" target="_blank" rel="noopener">ExtremeTeam</a>, <a href="https://sc.extremeteam.online" target="_blank" rel="noopener">FractalScript</a> and <a href="https://launcher.extremeteam.online" target="_blank" rel="noopener">FractalLauncher</a>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <a class="return-link" href="https://sv.extremeteam.online/">
+        <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false"><path d="M17 7L7 17M9 17h-2v-2M7 17h2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M11 17h6a2 2 0 0 0 2-2v-8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        Return to the SafeView website
+      </a>
+      <div class="eco-links">
+        <a href="https://extremeteam.online" target="_blank" rel="noopener">ExtremeTeam</a>
+        <a href="https://sc.extremeteam.online" target="_blank" rel="noopener">FractalScript</a>
+        <a href="https://launcher.extremeteam.online" target="_blank" rel="noopener">FractalLauncher</a>
+        <a href="https://sv.extremeteam.online/">Main site</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span data-year>2026</span> Fractal · ExtremeTeam</span>
+      <span>Fractal SafeView — a security-focused desktop video player</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+'use strict';
+
+/* ============================================================
+   EDITABLE RELEASES — add real release entries here.
+
+   Each entry:
+   {
+     version: "1.0.0",            // exact version string
+     date:    "2026-01-15",       // release date (YYYY-MM-DD)
+     platform:"Windows",          // verified target platform
+     notes:   "First public release — …",
+     files: [
+       { name:"SafeView-1.0.0-portable.zip", desc:"Portable zip — extract and run, no installer", url:"https://…" }
+     ]
+   }
+
+   Rules: only add entries you can verify — no invented versions,
+   file sizes, checksums or download counts. Each file entry must
+   carry a real, working URL. Entries render as release cards
+   automatically; the newest entry (first in the array) is tagged
+   "Latest".
+   ============================================================ */
+var SAFEVIEW_RELEASES = [
+  {
+    version:  "1.0.0",
+    date:     "2026-11-22",
+    platform: "Windows",
+    notes:    "First public release, published on GitHub Releases. Portable zip — extract it to a folder and run the application from there; no installer.",
+    files: [
+      { name: "SafeView-v1.0.0.zip", desc: "Portable zip — extract and run, no installer", url: "https://github.com/TheNewExtremeRay/FractalSafeView/releases/download/1.0.0/SafeView-v1.0.0.zip" }
+    ]
+  }
+];
+
+function escapeHtml(s){
+  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+
+function renderReleases(){
+  var root = document.getElementById('release-list');
+  if (!root) return;
+  if (!SAFEVIEW_RELEASES.length){
+    var es = root.querySelector('.empty-state');
+    if (es) es.hidden = false;
+    return;
+  }
+
+  var html = '';
+  SAFEVIEW_RELEASES.forEach(function(rel, i){
+    var latest = i === 0;
+    html += '<article class="release' + (latest ? ' latest' : '') + '">'
+      +   '<div class="release-top">'
+      +     '<h3>Fractal SafeView ' + escapeHtml(rel.version || '') + '</h3>'
+      +     '<span class="rel-tag ' + (latest ? 'latest' : 'prev') + '">' + (latest ? 'Latest' : 'Previous') + '</span>'
+      +   '</div>'
+      +   '<div class="release-meta">'
+      +     (rel.date ? '<span>' + escapeHtml(rel.date) + '</span>' : '')
+      +     (rel.platform ? '<span>' + escapeHtml(rel.platform) + '</span>' : '')
+      +   '</div>'
+      +   (rel.notes ? '<p class="release-notes">' + escapeHtml(rel.notes) + '</p>' : '');
+    if (rel.files && rel.files.length){
+      html += '<ul class="release-files">';
+      rel.files.forEach(function(f){
+        html += '<li>'
+          + '<span class="f-name">' + escapeHtml(f.name || 'file') + '</span>'
+          + (f.desc ? '<span class="f-desc">' + escapeHtml(f.desc) + '</span>' : '')
+          + '<a href="' + escapeHtml(f.url || '#') + '"' + (f.url && f.url.indexOf('http') === 0 ? ' target="_blank" rel="noopener"' : '') + '>Download</a>'
+          + '</li>';
+      });
+      html += '</ul>';
+    }
+    html += '</article>';
+  });
+  root.innerHTML = html;
+}
+
+renderReleases();
+
+/* ---------- Chrome ---------- */
+var yearEl = document.querySelector('[data-year]');
+if (yearEl) yearEl.textContent = String(new Date().getFullYear());
+
+var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+var revealEls = Array.prototype.slice.call(document.querySelectorAll('[data-reveal]'));
+if (!reduceMotion && 'IntersectionObserver' in window){
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting){
+        entry.target.classList.add('revealed');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
+  revealEls.forEach(function(el){ io.observe(el); });
+} else {
+  revealEls.forEach(function(el){ el.classList.add('revealed'); });
+}
+
+})();
+</script>
+</body>
+</html>
